@@ -1,6 +1,6 @@
 # flash-repo
 
-Examples (from freeactionscripts), a simple game, flash player.
+Examples (freeactionscripts), a simple game, flash player.
 
 ## How to bypass flash time stamp?
 
