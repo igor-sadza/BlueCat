@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetupPrereq>
+	<files>
+		<file LocalFile="C:\Users\Administrator\Downloads\microsoft visual c++\microsoft visual c++\c++ 2005\vcredist_x86.EXE" URL="http://download.microsoft.com/download/e/1/c/e1c773de-73ba-494a-a5ba-f24906ecf088/vcredist_x86.exe" CheckSum="CE2922F83FB4B170AFFCE0EA448B107B" FileSize="0,2707352"/>
+	</files>
+	<execute file="vcredist_x86.EXE" cmdline="/q:a /c:&quot;msiexec /i vcredist.msi /qn&quot;" cmdlinesilent="/q:a /c:&quot;msiexec /i vcredist.msi /qn&quot;"/>
+	<properties Id="{8034C99E-3BC0-4E53-BC6E-02E3D8CF5378}" Description="This prerequisite installs the Microsoft Visual C++ 2005 SP1 Redistributable Package for x86-based systems." AltPrqURL="3010,8192,1641,1046"/>
+	<behavior Reboot="2"/>
+</SetupPrereq>

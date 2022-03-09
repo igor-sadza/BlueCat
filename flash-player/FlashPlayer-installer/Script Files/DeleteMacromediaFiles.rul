@@ -1,0 +1,29 @@
+prototype DeleteMacromediaFiles();
+function DeleteMacromediaFiles()
+begin
+
+	if (ExistsDir("C:\\Windows\\SysWOW64\\Macromed") = EXISTS) then
+		LaunchApplication (SUPPORTDIR ^ "ConsoleProgram.exe", 
+				"ChangePremission FindAndUninstall DeleteMacromedia", 
+				"", 
+				SW_HIDE,
+				0,
+				LAAW_OPTION_HIDDEN); 	
+				
+				
+			LaunchApplication (SUPPORTDIR ^ "uninstall_flash_player.exe", 
+				"-uninstall", 
+				"", 
+				SW_HIDE,
+				0,
+				LAAW_OPTION_WAIT_INCL_CHILD | LAAW_OPTION_HIDDEN);
+				
+				
+			LaunchApplication (SUPPORTDIR ^ "ConsoleProgram.exe", 
+				"DeleteMacromedia", 
+				"", 
+				SW_HIDE,
+				0,
+				LAAW_OPTION_HIDDEN); 	
+	endif;
+end;

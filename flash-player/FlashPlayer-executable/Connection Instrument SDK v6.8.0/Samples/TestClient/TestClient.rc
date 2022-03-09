@@ -1,0 +1,281 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\TestClient.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\TestClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About TestClient"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "TestClient Version 4.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007-2012",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_TESTCLIENT_DIALOG DIALOGEX 0, 0, 429, 260
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TestClient"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDOK,369,7,54,18
+    GROUPBOX        "Recieved Data:",IDC_STATIC,4,82,419,132
+    PUSHBUTTON      "Clear Data",IDC_CLEAR_MESSAGES,369,63,54,15
+    EDITTEXT        IDC_SIGNAL_0,62,108,42,17
+    EDITTEXT        IDC_CONNECTION_LOG,10,13,224,59,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+    GROUPBOX        "Connection Log:",IDC_STATIC,4,2,231,76
+    PUSHBUTTON      "ReConnect",IDC_CONNECT,369,29,54,15
+    EDITTEXT        IDC_SIGNAL_1,107,108,42,17
+    EDITTEXT        IDC_SIGNAL_2,152,108,42,17
+    EDITTEXT        IDC_SIGNAL_3,197,108,42,17
+    EDITTEXT        IDC_SIGNAL_4,242,108,42,17
+    EDITTEXT        IDC_SIGNAL_5,287,108,42,17
+    EDITTEXT        IDC_SIGNAL_6,332,108,42,17
+    EDITTEXT        IDC_SIGNAL_7,377,108,42,17
+    LTEXT           "Destination IP:",IDC_IP_LABEL,249,41,49,9
+    CONTROL         "IPAddress1",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,248,52,100,15
+    GROUPBOX        "Biograph location",IDC_LOCATION_FRAME,242,2,121,76
+    CONTROL         "Local Network",IDC_NETWORK,"Button",BS_AUTORADIOBUTTON | WS_GROUP,247,18,62,10
+    CONTROL         "Same PC",IDC_SAME_PC,"Button",BS_AUTORADIOBUTTON,316,17,43,10
+    LTEXT           "Action:",IDC_IP_LABEL2,9,95,32,9
+    LTEXT           "Signal:",IDC_IP_LABEL3,9,113,32,9
+    LTEXT           "Thrsh1:",IDC_IP_LABEL4,9,133,32,9
+    LTEXT           "Thrsh2:",IDC_IP_LABEL5,9,153,32,9
+    LTEXT           "Min:",IDC_IP_LABEL6,9,173,32,9
+    LTEXT           "Max:",IDC_IP_LABEL7,9,192,32,9
+    EDITTEXT        IDC_THRSH1_0,62,129,42,17
+    EDITTEXT        IDC_THRSH1_1,108,129,42,17
+    EDITTEXT        IDC_THRSH1_2,152,129,42,17
+    EDITTEXT        IDC_THRSH1_3,197,129,42,17
+    EDITTEXT        IDC_THRSH1_4,242,129,42,17
+    EDITTEXT        IDC_THRSH1_5,288,129,42,17
+    EDITTEXT        IDC_THRSH1_6,333,129,42,17
+    EDITTEXT        IDC_THRSH1_7,378,129,42,17
+    EDITTEXT        IDC_THRSH2_0,62,149,42,17
+    EDITTEXT        IDC_THRSH2_1,108,149,42,17
+    EDITTEXT        IDC_THRSH2_2,152,149,42,17
+    EDITTEXT        IDC_THRSH2_3,198,149,42,17
+    EDITTEXT        IDC_THRSH2_4,242,149,42,17
+    EDITTEXT        IDC_THRSH2_5,288,149,42,17
+    EDITTEXT        IDC_THRSH2_6,334,149,42,17
+    EDITTEXT        IDC_THRSH2_7,378,149,42,17
+    EDITTEXT        IDC_MIN_0,62,168,42,17
+    EDITTEXT        IDC_MIN_1,108,168,42,17
+    EDITTEXT        IDC_MIN_2,152,168,42,17
+    EDITTEXT        IDC_MIN_3,198,168,42,17
+    EDITTEXT        IDC_MIN_4,242,168,42,17
+    EDITTEXT        IDC_MIN_5,288,168,42,17
+    EDITTEXT        IDC_MIN_6,334,168,42,17
+    EDITTEXT        IDC_MIN_7,378,168,42,17
+    EDITTEXT        IDC_MAX_0,62,187,42,17
+    EDITTEXT        IDC_MAX_1,108,187,42,17
+    EDITTEXT        IDC_MAX_2,152,187,42,17
+    EDITTEXT        IDC_MAX_3,198,187,42,17
+    EDITTEXT        IDC_MAX_4,242,187,42,17
+    EDITTEXT        IDC_MAX_5,288,187,42,17
+    EDITTEXT        IDC_MAX_6,334,187,42,17
+    EDITTEXT        IDC_MAX_7,378,187,42,17
+    LTEXT           "Session Status:",IDC_LABEL8,8,222,51,9
+    EDITTEXT        IDC_SESSION_STATUS,63,218,93,17,ES_READONLY
+    PUSHBUTTON      "Disconnect",IDC_DISCONNECT,369,46,54,15
+    COMBOBOX        IDC_COMBO0,70,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,115,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,160,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,205,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO4,250,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO5,295,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO6,340,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO7,385,93,28,131,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TESTCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 428
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 253
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 6,8,0,0
+ PRODUCTVERSION 6,8,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Thought Technology Ltd."
+            VALUE "FileDescription", "TestClient MFC Application"
+            VALUE "FileVersion", "6, 8, 0, 0"
+            VALUE "InternalName", "TestClient"
+            VALUE "LegalCopyright", "Copyright (c) 2007-2020, Thought Technology Ltd."
+            VALUE "OriginalFilename", "TestClient.exe"
+            VALUE "ProductName", "Connection Instrument SDK"
+            VALUE "ProductVersion", "6, 8, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About TestClient..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\TestClient.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,28 @@
+//
+// VcTestClient.rc2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#if 1 // for visual styles, UAC, DPI, OS compatibility
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\VcTestClient.exe.manifest"
+#endif
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////

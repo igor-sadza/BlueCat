@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+	<TargetApplication>
+		<Title>TT Flash Player (default)</Title>
+		<Snapshot>TTFlashPlayer.bmp</Snapshot>
+		<Path>.\ISFlashPlayer.exe</Path>
+		<Arguments></Arguments>
+		<Action>
+			<ID>0</ID>
+			<Description>Action 0</Description>
+		</Action>
+		<Action>
+			<ID>1</ID>
+			<Description>Action 1</Description>
+		</Action>
+		<Action>
+			<ID>2</ID>
+			<Description>Action 2</Description>
+		</Action>
+		<Action>
+			<ID>3</ID>
+			<Description>Action 3</Description>
+		</Action>
+		<Action>
+			<ID>4</ID>
+			<Description>Action 4</Description>
+		</Action>
+		<Action>
+			<ID>5</ID>
+			<Description>Action 5</Description>
+		</Action>
+		<Action>
+			<ID>6</ID>
+			<Description>Action 6</Description>
+		</Action>
+		<Action>
+			<ID>7</ID>
+			<Description>Action 7</Description>
+		</Action>
+	</TargetApplication>

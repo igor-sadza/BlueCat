@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--TransferMode:Full(1),Percentage(2),Boolean(3)-->
+<TargetApplication>
+  <Title>Sample Flash Player that plays Flash movie</Title>
+  <Snapshot>SampleFlashPlayer.bmp</Snapshot>
+  <Path><!--Put path to your exe here!!--></Path>
+  <Arguments>GameTemplate4.swf</Arguments>
+  <TCPPort>1000</TCPPort>
+  <Action>
+    <ID>0</ID>
+    <Description>Move Left</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>1</ID>
+    <Description>Move Right</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>2</ID>
+    <Description>Move UP</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>3</ID>
+    <Description>Move Down</Description>
+    <TransferMode>2</TransferMode>
+  </Action>
+  <Action>
+    <ID>4</ID>
+    <Description>Move Forward</Description>
+    <TransferMode>3</TransferMode>
+  </Action>
+  <Action>
+    <ID>5</ID>
+    <Description>Move Back</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>6</ID>
+    <Description>Go Faster</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>7</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+</TargetApplication>

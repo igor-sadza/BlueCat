@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<!--TransferMode:Full(1),Percentage(2),Boolean(3)-->
+<TargetApplication>
+  <Title>TestClient App</Title>
+  <Snapshot>TestClient.bmp</Snapshot>
+  <Path>
+    <!--Put path to your exe here!!-->
+  </Path>
+  <Arguments>
+    <!--Put command line params to be passed to exe here!!-->
+  </Arguments>
+  <TCPPort>1000</TCPPort>
+  <Action>
+    <ID>0</ID>
+    <Description>Move Left</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>1</ID>
+    <Description>Move Right</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>2</ID>
+    <Description>Move UP</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>3</ID>
+    <Description>Move Down</Description>
+    <TransferMode>2</TransferMode>
+  </Action>
+  <Action>
+    <ID>4</ID>
+    <Description>Move Forward</Description>
+    <TransferMode>3</TransferMode>
+  </Action>
+  <Action>
+    <ID>5</ID>
+    <Description>Move Back</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>6</ID>
+    <Description>Go Faster</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>7</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>8</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>9</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>10</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>11</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>12</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>13</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>14</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>15</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>16</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>17</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>18</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>19</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>20</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>21</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>22</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>23</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>24</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>25</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>26</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>27</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>28</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>29</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>30</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>31</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>32</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>33</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>34</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>35</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>36</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>37</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>38</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>39</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>40</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>41</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>42</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>43</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>44</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>45</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>46</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>47</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>48</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>49</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>50</ID>
+    <Description>Go Slower</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+</TargetApplication>

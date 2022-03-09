@@ -1,0 +1,211 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\VcTestClient.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\VcTestClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDR_MAINFRAME DIALOGEX 0, 0, 238, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "VcTestClient"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "&BioGraph location:",IDC_STATIC,7,7,196,11,SS_CENTERIMAGE
+    CONTROL         "IPAddress1",IDC_IPADDRESS,"SysIPAddress32",WS_TABSTOP,7,21,100,12
+    CHECKBOX        "&Connected to BioGraph",IDC_CHECK_CONNECTED,7,35,196,12
+    EDITTEXT        IDC_EDIT_MESSAGES,7,49,196,63,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "-0000",IDC_ACTION0,7,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION1,35,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION2,63,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION3,91,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION4,119,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION5,147,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION6,175,121,21,110,SS_NOPREFIX
+    LTEXT           "-0000",IDC_ACTION7,203,121,21,110,SS_NOPREFIX
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDR_MAINFRAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#if defined(APSTUDIO_INVOKED) || defined(_UNICODE)
+#if defined(APSTUDIO_INVOKED)
+VS_VERSION_INFO$(_UNICODE) VERSIONINFO
+#else
+VS_VERSION_INFO VERSIONINFO
+#endif
+ FILEVERSION 6,8,0,0
+ PRODUCTVERSION 6,8,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Thought Technology Ltd."
+            VALUE "FileDescription", "Connection Client API Sample"
+            VALUE "FileVersion", "6, 8, 0, 0"
+            VALUE "InternalName", "VcTestClient"
+            VALUE "LegalCopyright", "Copyright (c) 2007-2020, Thought Technology Ltd."
+            VALUE "OriginalFilename", "VcTestClient.exe"
+            VALUE "ProductName", "Connection Instrument SDK"
+            VALUE "ProductVersion", "6, 8, 0, 0"
+            VALUE "SpecialBuild", "Unicode Build"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || !defined(_UNICODE)
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 6,8,0,0
+ PRODUCTVERSION 6,8,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Thought Technology Ltd."
+            VALUE "FileDescription", "Connection Client API Sample"
+            VALUE "FileVersion", "6, 8, 0, 0"
+            VALUE "InternalName", "VcTestClient"
+            VALUE "LegalCopyright", "Copyright (c) 2007-2020, Thought Technology Ltd."
+            VALUE "OriginalFilename", "VcTestClient.exe"
+            VALUE "ProductName", "Connection Instrument SDK"
+            VALUE "ProductVersion", "6, 8, 0, 0"
+            VALUE "SpecialBuild", "Ansi Build"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+#endif
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\VcTestClient.rc2"  // non-Microsoft Visual C++ edited resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

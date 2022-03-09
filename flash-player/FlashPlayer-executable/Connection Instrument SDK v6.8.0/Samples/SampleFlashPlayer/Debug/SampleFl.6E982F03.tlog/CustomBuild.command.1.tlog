@@ -1,0 +1,2 @@
+^D:\XX\CONNECTION INSTRUMENT SDK V6.8.0\SAMPLES\SAMPLEFLASHPLAYER\POSTBUILD.MK
+nmake /nologo /c /f D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\PostBuild.mk OUTDIR=D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\Debug\

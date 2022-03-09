@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--TransferMode:Full(1),Percentage(2),Boolean(3)-->
+<TargetApplication>
+  <Title>VcTestClient Default Actions</Title>
+  <Snapshot>VcTestClient.bmp</Snapshot>
+  <Path>Put path to your exe here!!</Path>
+  <Arguments></Arguments>
+  <TCPPort>1000</TCPPort>
+  <Action>
+    <ID>0</ID>
+    <Description>Action 0</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>1</ID>
+    <Description>Action 1</Description>
+    <TransferMode>3</TransferMode>
+  </Action>
+  <Action>
+    <ID>2</ID>
+    <Description>Action 2</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>3</ID>
+    <Description>Action 3</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>4</ID>
+    <Description>Action 4</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>5</ID>
+    <Description>Action 5</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>6</ID>
+    <Description>Action 6</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+  <Action>
+    <ID>7</ID>
+    <Description>Action 7</Description>
+    <TransferMode>1</TransferMode>
+  </Action>
+</TargetApplication>

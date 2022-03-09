@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+	<TargetApplication>
+		<Title>BioPLAYER</Title>
+		<Snapshot>itallis.bmp</Snapshot>
+		<Path>.\ISFlashPlayer.exe</Path>
+		<Arguments></Arguments>
+		<Action>
+			<ID>0</ID>
+			<Description>Bio1 boolean</Description>
+		</Action>
+		<Action>
+			<ID>1</ID>
+			<Description>Bio2 boolean</Description>
+		</Action>
+		<Action>
+			<ID>2</ID>
+			<Description>Bio3 percentage</Description>
+		</Action>
+	</TargetApplication>

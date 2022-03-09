@@ -1,0 +1,58 @@
+#include "DeleteMacromediaFiles.rul"
+
+//TTL
+#define ISFlashPlayer PROGRAMFILES^"\\Thought Technology\\Infiniti\\ISFlashPlayer.exe"
+#define BiographUpdate PROGRAMFILES^"\\Thought Technology\\Infiniti\\ExecuteApp.exe"
+//BioEra
+#define BioEraTrial PROGRAMFILES^"\\BioEraTrial\\bioera.exe"
+#define BioEraPro PROGRAMFILES^"\\BioEraPro\\bioera.exe"
+//BioExplorer
+#define BioExplorer PROGRAMFILES^"\\BioExplorer\\BE1.exe"
+
+//---------------------------------------------------------------------------
+// The Installed event is sent after the feature ISFlashPlayer
+// is installed.
+//---------------------------------------------------------------------------
+export prototype ISFlashPlayer_Installed();
+function ISFlashPlayer_Installed()
+begin
+	if (Is(FILE_EXISTS,BiographUpdate)) then
+		if(LaunchAppAndWait(BiographUpdate,"",LAAW_OPTION_WAIT) < 0) then
+			 MessageBox ("Biograph Full-Update could not start!", SEVERE);
+		endif;
+
+		if(LaunchApp(ISFlashPlayer,"") < 0) then
+			 MessageBox ("ISFlashPlayer could not start!", SEVERE);
+		endif;	
+	endif;
+	
+	if (Is(FILE_EXISTS,BioEraTrial)) then
+			if(LaunchAppAndWait(BioEraTrial,"",LAAW_OPTION_WAIT) < 0) then
+			 MessageBox ("BioEra  could not start!", SEVERE);
+		endif;
+	endif;
+	
+	if (Is(FILE_EXISTS,BioEraPro)) then
+			if(LaunchAppAndWait(BioEraPro,"",LAAW_OPTION_WAIT) < 0) then
+			 MessageBox ("BioEra  could not start!", SEVERE);
+		endif;
+	endif;
+	
+	
+	if (Is(FILE_EXISTS,BioExplorer)) then
+			if(LaunchAppAndWait(BioExplorer,"",LAAW_OPTION_WAIT) < 0) then
+			 MessageBox ("BioExplorer  could not start!", SEVERE);
+		endif;
+	endif;
+	
+end;
+
+//---------------------------------------------------------------------------
+// The Installing event is sent just before the feature 
+// ISFlashPlayer is installed.
+//---------------------------------------------------------------------------
+export prototype ISFlashPlayer_Installing();
+function ISFlashPlayer_Installing()
+begin
+	DeleteMacromediaFiles();
+end;

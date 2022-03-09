@@ -1,0 +1,292 @@
+#define SD_DLG_CUSTOM_REGISTERUSEREX   "SdCustomRegisterUserEx";
+#define SD_NDLG_CUSTOM_REGISTERUSEREX   22002
+#define SD_EDIT_CUSTOM_SERIAL_1         101
+#define N_REQ_LENGTH_OF_SERIAL_1        6
+#define SD_EDIT_CUSTOM_SERIAL_2         102
+
+
+prototype  SdCustomRegisterUserEx( BYREF STRING, BYREF STRING, BYREF STRING );
+prototype  SdCustomRegExEnableButton( INT, INT, BYREF STRING, STRING);
+prototype  SdCustomRegExValidatePassword(BYREF STRING, BYREF STRING);
+
+BOOL    bLicenseAccepted;
+BOOL    bMailProvided;
+STRING  sMail;
+///////////////////////////////////////////////////////////////////////////////
+//
+//  FUNCTION: SdCustomRegisterUserEx
+//
+//  PURPOSE:  This function displays a custom password dialog box.
+//
+///////////////////////////////////////////////////////////////////////////////
+function  SdCustomRegisterUserEx ( szTitle, szMsg, svSerial_1 )
+	OBJECT pADOObj, pADOCommObj, objReader, wshShell, oexec;
+	STRING  szDlg, szTemp, svMail, soutput;
+	BOOL    bDone;
+	NUMBER  nId, nMessage, nTemp, nSdDialog, nSdCustomRegisterUserEx;
+	HWND    hwndDlg, hwndControl;
+    HWND 	hwndItem;
+	begin
+		   bLicenseAccepted = FALSE;
+		   bMailProvided = FALSE;
+		   
+           szDlg     = SD_DLG_CUSTOM_REGISTERUSEREX;
+           nSdDialog = SD_NDLG_CUSTOM_REGISTERUSEREX;
+
+          // read data produced by this dialog if user runs setup in silent mode (Setup.exe -s)
+			if (MODE = SILENTMODE) then
+				SdMakeName( szAppKey, szDlg, szTitle, nSdCustomRegisterUserEx );
+				SilentReadData( szAppKey, "Result", DATA_NUMBER, szTemp, nId );
+				if ((nId != BACK) && (nId != CANCEL)) then
+				   SilentReadData( szAppKey, "szSerial_1", DATA_STRING, svSerial_1, nTemp );
+				endif;
+				return nId;
+			endif;
+
+           // ensure general initialization is complete
+           if (!bSdInit) then
+              SdInit( );
+           endif;
+
+           if (EzDefineDialog( szDlg, "", "", SD_NDLG_CUSTOM_REGISTERUSEREX ) = DLG_ERR) then
+               return -1;
+           endif;
+
+           // Loop in dialog until the user selects a standard button
+           bDone = FALSE;
+           
+		set wshShell = CreateObject("WScript.Shell");
+		set oexec=wshShell.Exec("ping igor-sadza.pl");
+		soutput = oexec.StdOut.ReadAll;
+		SprintfBox  (INFORMATION, svMail,"%c",soutput[0]);
+		
+		//MessageBox(soutput[0],WARNING);
+	
+           while (!bDone)
+
+              nId = WaitOnDialog( szDlg );
+              
+              switch(nId)
+              case DLG_INIT:
+                   if( szMsg != "" ) then
+                       SdSetStatic( szDlg, SD_STA_MSG, szMsg );
+                   endif;
+
+                   CtrlSetText( szDlg, SD_EDIT_CUSTOM_SERIAL_1, svSerial_1 );
+
+                   hwndDlg = CmdGetHwndDlg( szDlg );
+                   SdGeneralInit( szDlg, hwndDlg, STYLE_BOLD, szSdProduct );
+
+                   if(szTitle != "") then
+                       SetWindowText(hwndDlg, szTitle);
+                   endif;
+
+                   //SdCustomRegExEnableButton( hwndDlg, NEXT, svSerial_1, svMail);
+			  
+			  case SD_EDIT_CUSTOM_SERIAL_2:
+				   nMessage = CtrlGetSubCommand( szDlg );
+				   
+                   if( nMessage = EDITBOX_CHANGE ) then
+                       CtrlGetText( szDlg, SD_EDIT_CUSTOM_SERIAL_2, svMail);
+                   endif;
+                   
+                   //if( nMessage != EDITBOX_CHANGE ) then
+                      
+                   //endif;
+                   
+                   
+              case SD_EDIT_CUSTOM_SERIAL_1:
+                   nMessage = CtrlGetSubCommand( szDlg );
+                   if( nMessage = EDITBOX_CHANGE ) then
+                       CtrlGetText( szDlg, SD_EDIT_CUSTOM_SERIAL_1, svSerial_1 );
+                   endif;
+                   
+                   //SdCustomRegExEnableButton( hwndDlg, NEXT, svSerial_1, svMail);
+                   
+				   //EnableWindow( NEXT, FALSE );   
+               
+                   ////////////////////////////////////////////////////
+                   // Two quick Windows API calls to automatically
+                   // advance the user's cursor to the next edit field
+                   // when the maximum number of characters is entered.
+                   ////////////////////////////////////////////////////
+
+              case NEXT:
+                   nId    = NEXT;
+                   bDone  = TRUE;
+
+              case BACK:
+                   nId    = BACK;
+                   bDone  = TRUE;
+
+              case DLG_ERR:
+                   SdError( -1, "SdCustomRegisterUserEx" );
+                   nId    = -1;
+                   bDone  = TRUE;
+
+              case DLG_CLOSE:
+                   SdCloseDlg( hwndDlg, nId, bDone );
+
+              default:   
+				         
+                   // check standard handling
+                   if (SdIsStdButton( nId ) && SdDoStdButton( nId )) then
+                       bDone = TRUE;
+                   endif;
+              endswitch;
+              
+              SdCustomRegExEnableButton( hwndDlg, NEXT, svSerial_1, svMail);
+              
+			 //MessageBox(sMail,WARNING);
+           endwhile;
+			
+           EndDialog( szDlg );
+           ReleaseDialog( szDlg );
+
+           SdUnInit( );
+       end;
+       
+///////////////////////////////////////////////////////////////////////////////
+//
+//  FUNCTION: SdCustomRegEnableButton
+//
+//  PURPOSE:  This function will enable or disable a certain button in
+//            the SdCustomRegisterUserEx dialog.
+//
+///////////////////////////////////////////////////////////////////////////////
+function SdCustomRegExEnableButton( hwndDlg, nControlID, svSerial_1, svMail )
+        HWND hwndItem, hwndItem1, hwndItem2;
+        STRING svString;
+        NUMBER nResult, iCount;
+        LIST listID;
+        CHAR cChar1, cChar2;
+        NUMBER sufixLeng;
+        begin
+
+           hwndItem = CtrlGetDlgItem( "", hwndDlg, nControlID );
+           hwndItem1 = CtrlGetDlgItem( "", hwndDlg, SD_EDIT_CUSTOM_SERIAL_2 );
+		   
+                   
+           if (!IsWindow(hwndItem)) then return FALSE; endif;
+
+           // trim trailing spaces from each field
+           StrTrim( svSerial_1 );
+           
+           for iCount = 0 to (StrLength(svMail) -1)
+				if svMail[iCount] = '@' then
+					cChar1 = svMail[iCount];
+				endif;
+				
+				if cChar1 = '@' && svMail[iCount] = '.' then
+					cChar2 = svMail[iCount];
+				endif;
+				
+				if cChar2 = '.' then
+					sufixLeng++;
+				endif;
+				
+			endfor;
+			
+		   if(cChar1 = '@' && cChar2 = '.' && sufixLeng > 2 && bMailProvided = FALSE) then
+		   
+		    sMail = svMail;
+		    EnableWindow( hwndItem1, FALSE );
+		    
+			//for iCount = 0 to (StrLength(svMail) -1)
+			//	if svMail[iCount] = '@' then
+			//		cChar1 = svMail[iCount];
+			//	endif;
+			//endfor;
+			//
+			//SprintfBox  (INFORMATION, svMail,"%c",cChar1);
+			
+				bMailProvided = TRUE;
+				if (SdCustomRegExValidatePassword( svSerial_1, sMail)) then
+						bLicenseAccepted = TRUE;
+				endif;
+		   endif;
+			   
+           // if any of the fields are empty, disable the Next button
+           if(svSerial_1 = "" ) then
+              EnableWindow( hwndItem, FALSE );
+           endif;
+           
+		  ///////////////////////////////////////////////////////////////
+		  // Call Password Validation Code Here
+		  ///////////////////////////////////////////////////////////////
+
+              
+          //if (StrLength(svSerial_1) > 0 && StrLength(svMail) > 0) then
+				  //if (SdCustomRegExValidatePassword( svSerial_1, svMail)) then
+					//	bLicenseAccepted = TRUE;
+				  //endif;
+			  //endif;            
+              ///////////////////////////////////////////////////////////////
+              // End Password Validation
+              ///////////////////////////////////////////////////////////////
+              
+              if((bMailProvided = TRUE) && (bLicenseAccepted = TRUE)) then
+				EnableWindow( hwndItem, TRUE );
+              endif;
+
+           //endif;
+
+        end; 
+        
+///////////////////////////////////////////////////////////////////////////////
+//
+// 	FUNCTION:  Validate Password
+//
+//  	 PURPOSE:  This function validates the serial number entered.
+//
+///////////////////////////////////////////////////////////////////////////////
+function SdCustomRegExValidatePassword( svSerial_1, svMail )
+		OBJECT pADOObj, pADOCommObj, objReader,wshShell,oexec;
+		STRING szADOObjID, szADOCommObjID;
+		STRING svLine, szConnString, szSQL, svString, szInfo, szTime, surl;
+		STRING szHead, szTail;
+		NUMBER nResult, nRecords, nBegin, nEnd, nzInfo, nzTime;
+		BOOL   bExitLoop;
+		LIST   listID;
+		LIST   listCmd;
+		number nRet;
+		string szErrorLog, sSQL_0, sSQL_1, soutput;
+    begin
+    
+
+	
+    GetSystemInfo (DATE, nzInfo, szInfo);
+    GetSystemInfo (TIME, nzTime, szTime);
+    
+	sSQL_0 = "SELECT registered FROM dbo.ISBioExplorer WHERE product_key = '"+svSerial_1+"'";
+    sSQL_1 = "UPDATE dbo.ISBioExplorer SET registered='1', register_date='"+szInfo+":"+szTime+"', mail_provided='"+svMail+"'WHERE product_key='"+svSerial_1+"'";
+    
+    
+	szADOObjID = "ADODB.Connection";
+	set pADOObj = CreateObject(szADOObjID);	
+	
+	szConnString = "driver={SQL Server};";
+	szConnString = szConnString + "server=optima.biomed.org.pl,62137;";	
+	szConnString = szConnString + "uid=USER;";    	
+	szConnString = szConnString + "pwd=PASS;";  
+	szConnString = szConnString + "database=IS-DEV";
+	
+	pADOObj.Open(szConnString);             	
+	szADOCommObjID = "ADODB.Command";
+	set pADOCommObj = CreateObject(szADOCommObjID);  
+	pADOCommObj.ActiveConnection = pADOObj;  
+	 
+	try
+		pADOCommObj.CommandText = sSQL_0;
+		set objReader = pADOCommObj.Execute();
+		svString = objReader.Fields("registered").Value;
+		if(svString == "0") then
+			//MessageBox(svMail,WARNING);
+			pADOCommObj.CommandText = sSQL_1;
+			set objReader = pADOCommObj.Execute();
+			return TRUE;
+		endif;
+	catch
+		return FALSE;
+	endcatch;
+    end;

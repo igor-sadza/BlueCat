@@ -1,0 +1,35 @@
+﻿  CShockwaveFlash.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\CShockwaveFlash.cpp : message : see previous definition of '_AFXDLL'
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\stdafx.h(29,9): warning C4279: 'value': identifier in type library 'Flash11e.ocx' is a keyword; use the 'rename' qualifier
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\stdafx.h(29,9): warning C4279: 'property': identifier in type library 'Flash11e.ocx' is a keyword; use the 'rename' qualifier
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\stdafx.h(29,9): warning C4192: automatically excluding 'IServiceProvider' while importing type library 'Flash11e.ocx'
+  FlashPlugin.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\FlashPlugin.cpp : message : see previous definition of '_AFXDLL'
+  FlashPluginDlg.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\FlashPluginDlg.cpp : message : see previous definition of '_AFXDLL'
+  SelectComputer.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\SelectComputer.cpp : message : see previous definition of '_AFXDLL'
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\SelectComputer.cpp(259,12): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\SelectComputer.cpp(246,9): warning C4101: 'Converted': unreferenced local variable
+  SelectNetwork.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\SelectNetwork.cpp : message : see previous definition of '_AFXDLL'
+  StdAfx.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\StdAfx.cpp : message : see previous definition of '_AFXDLL'
+  Validate.cpp
+D:\Software\Microsoft\VisualStudio\VC\Tools\MSVC\14.28.29910\atlmfc\include\afx.h(13,1): warning C4005: '_AFXDLL': macro redefinition
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\Validate.cpp : message : see previous definition of '_AFXDLL'
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  Generating Code...
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\Validate.cpp(17): warning C4793: 'Validate::getCpuID': function compiled as native:
+  	Inline native assembly not supported in managed code
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\CShockwaveFlash.h(19): warning C4172: returning address of local variable or temporary: clsid
+D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\CShockwaveFlash.h(19): warning C4172: returning address of local variable or temporary: clsid
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
+SelectComputer.obj : warning LNK4248: unresolved typeref token (01000018) for '_IMAGELIST'; image may not run
+  ISFlashPlayer.vcxproj -> D:\xx\Connection Instrument SDK v6.8.0\Samples\SampleFlashPlayer\Release\ISFlashPlayer.exe

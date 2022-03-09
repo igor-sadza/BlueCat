@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+		<assemblyIdentity
+		version="1.0.0.0"
+		processorArchitecture="*"
+		name="IgorSadza.ISFlashPlayer"
+		type="win32"
+	/>
+
+	<!-- file elements
+    name: HKEY_CLASSES_ROOT\CLSID\{CLSID}\InprocServer32, default value
+          HKEY_CLASSES_ROOT\TypeLib\{TLBID}\{version}\{lcid}\win32, default value
+          Note: Keep only the file names
+          Note: In this case, the class factories and the type library happen to be in the same file
+                Otherwise, the comClass and the typelib elements would be under different file elements
+  -->
+
+	<file name="Flash11e.ocx">
+
+		<!-- comClass elements
+      description:         HKEY_CLASSES_ROOT\CLSID\{CLSID}, default value
+      clsid:               {CLSID}
+      threadingModel:      HKEY_CLASSES_ROOT\CLSID\{CLSID}\InprocServer32, ThreadingModel
+      tlbid:               HKEY_CLASSES_ROOT\CLSID\{CLSID}\TypeLib, default value
+      progid:              HKEY_CLASSES_ROOT\CLSID\{CLSID}\ProgID, default value
+      miscStatus:          HKEY_CLASSES_ROOT\CLSID\{CLSID}\MiscStatus, default value
+      miscStatusIcon:      HKEY_CLASSES_ROOT\CLSID\{CLSID}\MiscStatus\4, default value
+      miscStatusContent:   HKEY_CLASSES_ROOT\CLSID\{CLSID}\MiscStatus\1, default value
+      miscStatusDocprint:  HKEY_CLASSES_ROOT\CLSID\{CLSID}\MiscStatus\8, default value
+      miscStatusThumbnail: HKEY_CLASSES_ROOT\CLSID\{CLSID}\MiscStatus\2, default value
+    -->
+
+		<comClass description="Shockwave Flash Object"
+				  clsid="{D27CDB6E-AE6D-11cf-96B8-444553540000}"
+				  threadingModel="Apartment"
+				  tlbid="{D27CDB6B-AE6D-11cf-96B8-444553540000}"
+				  progid="ShockwaveFlash.ShockwaveFlash"
+				  miscStatus=""
+				  miscStatusContent="recomposeonresize,cantlinkinside,insideout,activatewhenvisible,setclientsitefirst">
+			<progid>MacromediaFlashPaper.MacromediaFlashPaper</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.1</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.3</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.4</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.5</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.6</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.7</progid>
+			<progid>ShockwaveFlash.ShockwaveFlash.8</progid>
+		</comClass>
+
+		<comClass description="Macromedia Flash Factory Object"
+				  clsid="{D27CDB70-AE6D-11cf-96B8-444553540000}"
+				  threadingModel="Apartment"
+				  tlbid="{D27CDB6B-AE6D-11cf-96B8-444553540000}"
+				  progid="FlashFactory.FlashFactory">
+			<progid>FlashFactory.FlashFactory.1</progid>
+		</comClass>
+
+		<!-- typelib elements
+      tlbid:      {TLBID}
+      version:    HKEY_CLASSES_ROOT\CLSID\{CLSID}\Version, default value
+                  HKEY_CLASSES_ROOT\Interface\{IID}\TypeLib, Version
+      helpdir:    HKEY_CLASSES_ROOT\TypeLib\{TLBID}\{version}\HELPDIR, default value
+      resourceid: HKEY_CLASSES_ROOT\TypeLib\{TLBID}\{lcid}, the subkey name
+      flags:      HKEY_CLASSES_ROOT\TypeLib\{TLBID}\{version}\Flags, default value
+    -->
+
+		<typelib tlbid="{D27CDB6B-AE6D-11cf-96B8-444553540000}"
+				 version="1.0"
+				 helpdir="."
+				 resourceid="0"
+				 flags=""/>
+
+		<!-- comInterfaceProxyStub elements
+      iid:              {IID}
+      name:             HKEY_CLASSES_ROOT\Interface\{IID}, default value
+      tlbid:            HKEY_CLASSES_ROOT\Interface\{IID}\TypeLib, default value
+      baseInterface:    HKEY_CLASSES_ROOT\Interface\{IID}\BaseInterface, default value
+      numMethods:       HKEY_CLASSES_ROOT\Interface\{IID}\NumMethods, default value
+      proxyStubClsid32: HKEY_CLASSES_ROOT\Interface\{IID}\ProxyStubClsid32, default value
+      threadingModel:   HKEY_CLASSES_ROOT\CLSID\{ProxyStubClsid32}\InprocServer32, ThreadingModel
+    -->
+		<!-- I found no need for any comInterfaceProxyStub -->
+	</file>
+
+	<!-- comInterfaceExternalProxyStub elements
+    iid:              {IID}
+    baseInterface:    HKEY_CLASSES_ROOT\Interface\{IID}\BaseInterface, default value
+    numMethods:       HKEY_CLASSES_ROOT\Interface\{IID}\NumMethods, default value
+    name:             HKEY_CLASSES_ROOT\Interface\{IID}, default value
+    tlbid:            HKEY_CLASSES_ROOT\Interface\{IID}\TypeLib, default value
+    proxyStubClsid32: HKEY_CLASSES_ROOT\Interface\{IID}\ProxyStubClsid32, default value
+  -->
+
+	<!--
+    I found these lingering from the current Flash installation I have.
+    Please check if they are the same for Flash 8.
+    If you don't need them, just remove them.
+
+    These are comInterfaceExternalProxyStub and not comInterfaceProxyStub,
+    because both {00020420-0000-0000-C000-000000000046} (PSDispatch, IDispatch-based interfaces)
+    and {00020424-0000-0000-C000-000000000046} (PSOAInterface, Type Library interfaces)
+    come with Windows.
+  -->
+
+	<comInterfaceExternalProxyStub iid="{86230738-D762-4C50-A2DE-A753E5B1686F}"
+								   name="IFlashObject"
+								   tlbid="{D27CDB6B-AE6D-11CF-96B8-444553540000}"
+								   proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+
+	<comInterfaceExternalProxyStub iid="{D27CDB6C-AE6D-11CF-96B8-444553540000}"
+								   name="IShockwaveFlash"
+								   tlbid="{D27CDB6B-AE6D-11CF-96B8-444553540000}"
+								   proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+
+	<comInterfaceExternalProxyStub iid="{D27CDB6D-AE6D-11CF-96B8-444553540000}"
+								   name="_IShockwaveFlashEvents"
+								   tlbid="{D27CDB6B-AE6D-11CF-96B8-444553540000}"
+								   proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"/>
+	
+	
+	
+</assembly>

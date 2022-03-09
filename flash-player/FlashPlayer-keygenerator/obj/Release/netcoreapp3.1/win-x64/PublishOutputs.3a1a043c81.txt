@@ -1,0 +1,2 @@
+C:\Users\Administrator\source\repos\WinFormsApp2\bin\Release\netcoreapp3.1\publish\ISFlashPlayerKeyGenerator.pdb
+C:\Users\Administrator\source\repos\WinFormsApp2\bin\Release\netcoreapp3.1\publish\ISFlashPlayerKeyGenerator.exe

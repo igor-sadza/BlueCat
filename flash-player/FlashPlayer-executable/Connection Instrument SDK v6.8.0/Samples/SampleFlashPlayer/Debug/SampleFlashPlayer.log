@@ -1,0 +1,7 @@
+﻿D:\Software\Microsoft\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: The property "IntermediateOutputPath" is being set to a value for the first time, but it was already consumed at "D:\Software\Microsoft\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+D:\Software\Microsoft\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(29,5): warning MSB4211: The property "DebugType" is being set to a value for the first time, but it was already consumed at "D:\Software\Microsoft\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (28,5)".
+D:\Software\Microsoft\VisualStudio\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(370,5): warning MSB4211: The property "CleanFile" is being set to a value for the first time, but it was already consumed at "D:\Software\Microsoft\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+  (Forces post build)
+  NMAKE :  U1052: file 'D:\xx\Connection' not found
+  Stop.
+D:\Software\Microsoft\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(240,5): error MSB8066: Custom build for 'PostBuild.mk' exited with code 2.
