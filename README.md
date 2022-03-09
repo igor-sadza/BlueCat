@@ -1,4 +1,4 @@
 # flash-repo
 
-Examples, simple game, flash player.
+Examples (from freeactionscripts), a simple game, flash player.
 
