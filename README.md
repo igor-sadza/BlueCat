@@ -8,7 +8,7 @@ Examples (freeactionscripts), a simple game, flash player.
 
 Use the Windows SDK mt.exe to export the manifest from the exe file. Edit it and import back.
 
-* [Stackoverflow - reading an application's manifest file?](https://stackoverflow.com/questions/20192480/use-flash-activex-as-registration-free)
+* [Stackoverflow - reading an application's manifest file?](https://stackoverflow.com/questions/420852/reading-an-applications-manifest-file)
 
 * [Stackoverflow - Use Flash ActiveX as registration free](https://stackoverflow.com/questions/20192480/use-flash-activex-as-registration-free)
 
