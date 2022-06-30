@@ -1,4 +1,4 @@
-# flash-repo
+# BlueCat
 
 Examples (freeactionscripts), a simple game, flash player.
 
