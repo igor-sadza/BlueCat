@@ -1,6 +1,6 @@
 # BlueCat
 
-Examples (freeactionscripts), a simple game, flash player.
+Flash - flashplayer, actionscripts, simple game.
 
 ## How to bypass flash time stamp?
 
